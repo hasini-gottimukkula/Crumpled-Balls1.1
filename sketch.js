@@ -15,11 +15,11 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	paper = new Paper(100, 600, 70);
+	paper = new Paper(100, 60, 20);
 
-	dustbin1 = new Dustbin(550, 620, 20, 10);
-	dustbin2 = new Dustbin(635, 660, 150, 20);
-	dustbin3 = new Dustbin(720, 620, 20, 10);
+	dustbin1 = new dustbin(550, 636, 20, 70);
+	dustbin2 = new dustbin(635, 660, 150, 20);
+	dustbin3 = new dustbin(720, 636, 20, 70);
 
 	ground = new Ground(400, 680, 800, 20);
 
@@ -36,15 +36,16 @@ function draw() {
 	paper.display();
 	dustbin1.display();
 	dustbin2.display();
-	dustbin1.display();
+	dustbin3.display();
 	ground.display();
 	drawSprites();
+
 
 }
 
 function keyPressed() {
 	if (keyCode === UP_ARROW) {
-		Matter.Body.applyForce(paper.body, paper.body.position, { x: 14, y: -14 });
+		Matter.Body.applyForce(paper.body, paper.body.position, { x: 60, y: -60 });
 	}
 }
 

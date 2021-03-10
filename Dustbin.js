@@ -1,6 +1,7 @@
 class Dustbin {
     constructor(x, y, width, height) {
         var options = {
+            isStatic: true,
             restitution: 0,
             friction: 0,
             density: 0.1
@@ -12,7 +13,6 @@ class Dustbin {
     }
     display() {
         fill("pink");
-        rect(this.body.position.x, this.body.position.y, this.width, this.height);
-
+        rect(this.body.posiiton.x, this.body.position.y, this.width, this.height);
     }
 }

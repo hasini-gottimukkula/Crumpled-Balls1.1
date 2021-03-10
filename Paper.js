@@ -7,15 +7,15 @@ class Paper {
             density: 1.2
 
         }
-        this.body = Bodies.circle(x, y, radius, options);
+        this.body = Bodies.circle(x, y, 70, options);
         this.radius = radius;
-        this.image = loadImage("images/paper.png");
+        // this.image = loadImage("paper.png");
         World.add(world, this.body);
     }
     display() {
         fill("white");
-        ellispeMode(Radius);
-        ellispe(this.body.position.x, this.body.position.y, this.radius);
+        ellipseMode(RADIUS);
+        ellipse(this.body.position.x, this.body.position.y, this.radius);
 
     }
 }
